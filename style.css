@@ -1,0 +1,448 @@
+/* Global reset aur default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body ke base styles */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles - gradient background with shadow */
+header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* User email badge style */
+#userEmail {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav button {
+  background-color: transparent;
+  border: 2px solid #2575fc;
+  color: #2575fc;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #2575fc;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Main container */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Section box design */
+.section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #6a11cb;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f4ff;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+}
+
+.form input,
+.form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.2);
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Checkbox alignment */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2575fc;
+}
+
+/* Submit button style */
+.form button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Capsule cards list */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.card-list li {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #2575fc;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-list li h3 {
+  color: #6a11cb;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.card-list li p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.card-list li .date {
+  color: #2575fc;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Action buttons inside card */
+.card-list li .actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.card-list li .actions button {
+  background: transparent;
+  border: none;
+  color: #2575fc;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.card-list li .actions button:hover {
+  background-color: #f0f4ff;
+}
+
+.card-list li .actions button.delete {
+  color: #e74c3c;
+}
+
+.card-list li .actions button.delete:hover {
+  background-color: #ffe6e6;
+}
+
+/* Capsule details view */
+#capsuleView {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#capsuleView h2 {
+  color: #6a11cb;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#capsuleDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+#capsuleUnlockDate {
+  color: #2575fc;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+#capsuleMedia {
+  margin: 2rem 0;
+}
+
+#capsuleMedia img,
+#capsuleMedia video {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Capsule view button */
+#capsuleView button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#capsuleView button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(106, 17, 203, 0.3);
+}
+
+/* Footer design */
+footer {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive styles for tablet */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav {
+    padding: 0.8rem 1rem;
+  }
+
+  nav button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #userEmail {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .section {
+    padding: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .form input,
+  .form textarea,
+  .form button {
+    padding: 0.7rem;
+  }
+}
+
+/* Fade-in animation for smooth UI */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section aur cards me fadeIn apply kiya */
+.section {
+  animation: fadeIn 0.5s ease;
+}
+
+.card-list li {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Focus outline accessibility */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #2575fc;
+  outline-offset: 2px;
+}
+
+/* Capsule status badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.8rem;
+}
+
+/* Locked capsule style */
+.status-locked {
+  background-color: #ffe6cc;
+  color: #e67e22;
+}
+
+/* Unlocked capsule style */
+.status-unlocked {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6c757d;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #dee2e6;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
